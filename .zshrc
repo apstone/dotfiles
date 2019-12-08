@@ -74,6 +74,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Turn off all beeps
+unsetopt BEEP
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
