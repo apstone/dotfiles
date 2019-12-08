@@ -9,6 +9,15 @@ Be sure to copy both `.zshrc` and `.oh-my-zsh/` to your home directory.
 
 By default, `zed.zsh-theme` requires the following plugins, which are not included with oh-my-zsh:
 
+#### Plugins
+
+###### history-search-multi-word
+
+[more info](https://github.com/zdharma/history-search-multi-word)
+
+```
+git clone git://github.com/zdharma/history-search-multi-word.git ~/.oh-my-zsh/custom/plugins/history-search-multi-word
+```
 
 ###### zsh-syntax-highlighting
 
