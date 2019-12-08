@@ -68,7 +68,7 @@ ZSH_THEME="zed"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git z zsh-syntax-highlighting zsh-autosuggestions history-substring-search history-search-multi-word)
 
 source $ZSH/oh-my-zsh.sh
 
