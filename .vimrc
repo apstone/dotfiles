@@ -74,4 +74,4 @@ set wildmenu            " show commands at the bottom
 set wildmode=list:longest,full
 set autoread            " reload file when written to externally
 
-nmap <leader>nt :NERDTreeToggle<cr>
+map <C-n> :NERDTreeToggle<CR>
