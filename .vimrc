@@ -41,13 +41,9 @@ let g:airline_theme='luna'
 let g:airline#extensions#tabline#enabled = 1
 
 " Environment Basics
-set shortmess+=I        " remove splash
-set virtualedit=all     " free roaming cursor
-set paste               " sane pasting
 set mouse=iv            " auto mouse
 set ruler               " show cursor position
-set number              " line numbers
-"set spell               " spell checker
+set number relativenumber             " line numbers
 set history=100         " history
 set visualbell          " No beeps
 
