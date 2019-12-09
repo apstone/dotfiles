@@ -20,6 +20,7 @@ Plugin 'ervandew/supertab'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'blueshirts/darcula'
+Plugin 'joshdick/onedark.vim'
 Plugin 'junegunn/goyo.vim'
 
 " All of your Plugins must be added before the following line
@@ -32,7 +33,7 @@ syntax enable           " highlighting
 set term=xterm-256color " for compatibility with tmux
 set t_Co=256            " 256 color support   
 set background=dark     " assume dark background
-color darcula
+color onedark
 
 " airline settings
 set laststatus=2
