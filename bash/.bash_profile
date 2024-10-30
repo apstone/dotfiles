@@ -1,3 +1,4 @@
+export GIT_EDITOR="nvim"
 
 fcd() {
     selected=$(find ~/projects ~/ -mindepth 1 -maxdepth 1 -type d | fzf)
