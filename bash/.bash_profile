@@ -1,5 +1,6 @@
 export GIT_EDITOR="nvim"
 
+
 fcd() {
     selected=$(find ~/projects ~/ -mindepth 1 -maxdepth 1 -type d | fzf)
     if [ -n "$selected" ]; then
@@ -8,3 +9,7 @@ fcd() {
         echo "No directory selected."
     fi
 }
+
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
