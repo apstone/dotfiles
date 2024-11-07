@@ -239,6 +239,8 @@ require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
+	"jwalton512/vim-blade", -- Laravel blade files
+
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
 	-- keys can be used to configure plugin behavior/loading/etc.
@@ -772,6 +774,19 @@ require("lazy").setup({
 				html = {},
 				rust_analyzer = {},
 				elixirls = {},
+
+				intelephense = {
+					filetypes = { "php", "blade", "php_only" },
+					settings = {
+						intelephense = {
+							filetypes = { "php", "blade", "php_only" },
+							files = {
+								associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
+								maxSize = 5000000,
+							},
+						},
+					},
+				},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
 				-- Some languages (like typescript) have entire language plugins that can be useful:
@@ -862,11 +877,13 @@ require("lazy").setup({
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
+				php = { "pint" },
+				blade = { "blade-formatter" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--
 				-- You can use 'stop_after_first' to run the first available formatter from the list
-				-- javascript = { "prettierd", "prettier", stop_after_first = true },
+				javascript = { "prettierd", "prettier", stop_after_first = true },
 			},
 		},
 	},
