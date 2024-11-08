@@ -769,6 +769,8 @@ require("lazy").setup({
 				-- pyright = {},
 				gopls = {},
 				["typescript-language-server"] = {},
+				prettierd = {},
+				eslint_d = {},
 				phpactor = {},
 				cssls = {},
 				html = {},
@@ -1004,6 +1006,36 @@ require("lazy").setup({
 		end,
 	},
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
+	{
+		"nvimtools/none-ls.nvim",
+		event = "VeryLazy",
+		opts = function()
+			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+			local null_ls = require("null-ls")
+
+			return {
+				sources = {
+					null_ls.builtins.formatting.prettierd,
+				},
+				on_attach = function(client, bufnr)
+					if client.supports_method("textDocument/formatting") then
+						vim.api.nvim_clear_autocmds({
+							group = augroup,
+							buffer = bufnr,
+						})
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							group = augroup,
+							buffer = bufnr,
+							callback = function()
+								vim.lsp.buf.format({ bufnr = bufnr })
+							end,
+						})
+					end
+				end,
+			}
+		end,
+	},
 
 	-- Highlight todo, notes, etc in comments
 	{
