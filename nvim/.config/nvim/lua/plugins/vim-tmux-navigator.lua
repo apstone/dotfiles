@@ -1,4 +1,5 @@
 return {
+  lazy = false,
   "christoomey/vim-tmux-navigator",
   cmd = {
     "TmuxNavigateLeft",
