@@ -8,5 +8,5 @@ require "nvchad.options"
 vim.opt.relativenumber = true
 vim.opt.number = true
 
- require("nvconfig").base46.theme = 'catppuccin'
- require("base46").load_all_highlights()
+require("nvconfig").base46.theme = "catppuccin"
+require("base46").load_all_highlights()

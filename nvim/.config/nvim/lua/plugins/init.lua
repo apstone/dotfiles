@@ -1,11 +1,10 @@
 return {
   {
     "stevearc/conform.nvim",
-      event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- Enables format-on-save
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -13,15 +12,21 @@ return {
     end,
   },
 
-
   {
     "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate", -- Ensures Treesitter parsers stay up-to-date
     opts = {
-        ensure_installed = {
-            "vim", "lua", "vimdoc",
-            "html", "css",
-            "javascript", "typescript", "tsx", "json"
-        },
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+      },
     },
   },
 }
